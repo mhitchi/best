@@ -1,3 +1,23 @@
+@import 'animate.css';
+
+// primary colors and typography
+$primary-color: #000;
+$secondary-color: #666;
+$background-color: #f0f0f0;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Alte';
+  src: url('./assets/fonts/AlteHaasGroteskRegular.ttf') format('ttf');
+}
+
+$header-font: 'Inter';
+$body-font: 'Alte';
+
 .App {
   text-align: center;
 }
