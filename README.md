@@ -26,4 +26,4 @@ captures identity more than just work
 bauhaus vibes
 
 # technologies
-I believe the simplest instance of this site will require React.js, HTML, CSS, Three.js.
+I believe the simplest instance of this site will require React.js, Node.js, Webpack, HTML, CSS, Three.js.
