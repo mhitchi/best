@@ -5,6 +5,13 @@ $primary-color: #000;
 $secondary-color: #666;
 $background-color: #f0f0f0;
 
+$green: #009c73;
+$blue: #2b93d1;
+$yellow: #ffd800;
+$orange: #e65925;
+$pink: #edaac6;
+$white: #fff6f1;
+
 @font-face {
   font-family: 'Inter';
   src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('ttf');
@@ -15,8 +22,8 @@ $background-color: #f0f0f0;
   src: url('./assets/fonts/AlteHaasGroteskRegular.ttf') format('ttf');
 }
 
-$header-font: 'Inter';
-$body-font: 'Alte';
+$header-font: 'Inter', sans-serif;
+$body-font: 'Alte', sans-serif;
 
 #root {
   background-color: $background-color;
@@ -28,12 +35,9 @@ $body-font: 'Alte';
 }
 
 h1, h2, h3 {
-  font-family: $header-font;
   font-weight: bold;
-  color: $primary-color;
 }
 
 h4, h5, h6, p {
-  font-family: $body-font;
-  color: $secondary-color;
+  font-weight: bold;
 }
