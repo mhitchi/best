@@ -13,18 +13,26 @@ const Sidebar = () => {
                 <Link className='logo' to='/'>
                     <img src={LogoSquare} alt="click to go home"/>
                 </Link>
-                <Link exact="true" activeclassname="active" className='nav-link about' to="/WhatsBest">
-                    <FontAwesomeIcon icon={faHome}/>
-                    <p>What's Best</p>
-                </Link>
-                <Link exact="true" activeclassname="active" className='nav-link cases' to="/BestCase">
-                    <FontAwesomeIcon icon={faBookmark}/>
-                    <p>Best Case Scenarios</p>
-                </Link>
-                <Link exact="true" activeclassname="active" className='nav-link friends' to="/BestFriends">
-                    <FontAwesomeIcon icon={faUser}/>
-                    <p>Best Friends</p>
-                </Link>
+                <ul className="link-tree">
+                    <li>
+                        <Link exact="true" activeclassname="active" className='nav-link about' to="/WhatsBest">
+                            <FontAwesomeIcon icon={faHome}/>
+                            <p>What's Best</p>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link exact="true" activeclassname="active" className='nav-link cases' to="/BestCase">
+                            <FontAwesomeIcon icon={faBookmark}/>
+                            <p>Best Case Scenarios</p>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link exact="true" activeclassname="active" className='nav-link friends' to="/BestFriends">
+                            <FontAwesomeIcon icon={faUser}/>
+                            <p>Best Friends</p>
+                        </Link>
+                    </li>
+                </ul>
             </div>
             <ul className="social">
                 <li><a target="_blank" rel="noreferrer" href="#"><FontAwesomeIcon icon={faSquareInstagram}/></a></li>
