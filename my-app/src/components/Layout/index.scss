@@ -1,1 +1,25 @@
 @import '../../App.scss';
+
+.page {
+    width: 400vh;
+    height: 100vh;
+    position: absolute;
+}
+@media (min-width: 768px) {
+    .page {
+        left: 10vw;
+    }
+}
+
+.top-tags {
+    bottom: auto;
+    top: 30px;
+}
+.tags {
+    color: $yellow;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+    font-size: 18px;
+}
