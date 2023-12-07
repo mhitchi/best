@@ -1,3 +1,5 @@
+import Loader from "react-loaders";
+
 const WhatsBest = () => {
     return (
         <>
@@ -7,6 +9,7 @@ const WhatsBest = () => {
                 
             </div>
         </div>
+        <Loader type="pacman"/>
         </>
     )
 }
