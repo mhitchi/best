@@ -26,8 +26,8 @@ captures identity more than just work
 bauhaus vibes
 
 # technologies
-I believe the simplest instance of this site will require React.js, Node.js, Webpack, HTML, CSS, SASS, Three.js, Animate.css, Greensock.js.
+I believe the simplest instance of this site will require React.js, Node.js, Webpack, HTML, CSS, SASS, Three.js, Animate.css, Greensock.js, Tailwind CSS.
 
-I think the whole site will be built as a continuous carousel, with the mouse tracker as a left or right arrow depending on where on the screen it is.
+I think the whole site will be built as a continuous carousel using Tailwind, with the mouse tracker as a left or right arrow depending on where on the screen it is.
 
-Product photography will be able to be added directly to the image foler and be pulled randomly to fall vertically and layer randomly like the current live github site. https://beststudioandworkshop.github.io/whatsbest/
+Product photography will be able to be added directly to the image folder and be pulled randomly to fall vertically and layer randomly like the current live github site. https://beststudioandworkshop.github.io/whatsbest/
