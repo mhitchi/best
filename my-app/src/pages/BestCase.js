@@ -1,10 +1,10 @@
-import Loader from "react-loaders";
+import starIcon04 from "../assets/icons/star_icon_04.png";
 
 const BestCase = () => {
     return (
         <>
         <p>Best Case Scenarios</p>
-        <Loader type="pacman"/>
+        <img className="loader" src={starIcon04} alt="loader star"/>
         </>
     )
 }

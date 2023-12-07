@@ -1,4 +1,4 @@
-import Loader from "react-loaders";
+import starIcon03 from "../assets/icons/star_icon_03.png";
 
 const WhatsBest = () => {
     return (
@@ -9,7 +9,7 @@ const WhatsBest = () => {
                 
             </div>
         </div>
-        <Loader type="pacman"/>
+        <img className="loader" src={starIcon03} alt="loader"/>
         </>
     )
 }

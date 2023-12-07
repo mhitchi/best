@@ -5,7 +5,8 @@ import cubeIcon from "../assets/icons/cube_icon.png";
 import eyesIcon from "../assets/icons/eyes_icon.png";
 import starIcon from "../assets/icons/star_icon.png";
 import thumbsUpIcon from "../assets/icons/thumbs_up_icon.png"
-import Loader from "react-loaders";
+
+
 
 const Home = () => {
     return (
@@ -37,7 +38,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <Loader type="pacman"/>
+        <img className="loader" src={starIcon} alt="loader star"/>
         </>
     )
 }

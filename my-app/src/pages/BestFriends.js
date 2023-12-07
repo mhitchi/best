@@ -1,10 +1,10 @@
-import Loader from "react-loaders";
+import starIcon02 from "../assets/icons/star_icon_02.png";
 
 const BestFriends = () => {
     return (
         <>
         <p>Best Friends</p>
-        <Loader type="pacman"/>
+        <img className="loader" src={starIcon02} alt="loader star"/>
         </>
     )
 }

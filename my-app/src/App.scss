@@ -154,7 +154,7 @@ h4, h5, h6, p {
   background-color: $white
 }
 
-.loader-active {
+.loader {
   display: block;
   position: absolute;
   left: 0;
@@ -162,8 +162,22 @@ h4, h5, h6, p {
   margin: auto;
   top: 0;
   bottom: 0;
-  width: 50px;
-  height: 50px;
-  animation: fadeOut 1.25s 1s;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s .25s;
   animation-fill-mode: forwards;
+  transition: ease-out;
+}
+
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); opacity: 1;}
+  to { -moz-transform: rotate(360deg); opacity: 0; }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); opacity: 1;}
+  to { -webkit-transform: rotate(360deg); opacity: 0; }
+}
+@keyframes spin {
+  from {transform:rotate(0deg); opacity: 1;}
+  to {transform:rotate(360deg); opacity: 0;}
 }
