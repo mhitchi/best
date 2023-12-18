@@ -394,7 +394,11 @@
   .face4 img {
     background-color: $white;
   }
+  .face5 img {
+    rotate: -180deg;
+  }
   .face6 img {
     background-color: $white;
+    rotate: -90deg;
   }
 //end spincube logo

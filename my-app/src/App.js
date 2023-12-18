@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import WhatsBest from './pages/WhatsBest';
 import BestFriends from './pages/BestFriends';
 import BestCase from './pages/BestCase';
-import gsap from "gsap";
 
 
 function App() {

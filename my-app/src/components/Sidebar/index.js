@@ -2,17 +2,14 @@ import { Link } from "react-router-dom";
 import "./index.scss";
 import LogoSquare from "../../assets/img/logoSquare.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser, faBookmark, faSquareEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
  import chairIcon from "../../assets/icons/chair_icon.png";
- import chair02Icon from "../../assets/icons/chair_02_icon.png";
- import cubeIcon from "../../assets/icons/cube_icon.png";
  import eyesIcon from "../../assets/icons/eyes_icon.png";
- import starIcon from "../../assets/icons/star_icon.png";
  import thumbsUpIcon from "../../assets/icons/thumbs_up_icon.png"
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,8 +93,8 @@ const Sidebar = () => {
            
             <ul className="social">
                 
-                <li><a target="_blank" rel="noreferrer" href="#"><FontAwesomeIcon icon={faSquareInstagram}/></a></li>
-                <li><a target="_blank" rel="noreferrer" href="#"><FontAwesomeIcon icon={faSquareEnvelope}/></a></li>
+                <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/"><FontAwesomeIcon icon={faSquareInstagram}/></a></li>
+                <li><a target="_blank" rel="noreferrer" href="mailto:placeholder@gmail.com"><FontAwesomeIcon icon={faSquareEnvelope}/></a></li>
                 {/* mailto: whatsbestdesign@gmail.com */}
                 {/* insta link */}
             </ul>
