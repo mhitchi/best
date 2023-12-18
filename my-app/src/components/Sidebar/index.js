@@ -8,19 +8,19 @@ import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
-// import chairIcon from "../../assets/icons/chair_icon.png";
-// import chair02Icon from "../../assets/icons/chair_02_icon.png";
-// import cubeIcon from "../../assets/icons/cube_icon.png";
-// import eyesIcon from "../../assets/icons/eyes_icon.png";
-// import starIcon from "../../assets/icons/star_icon.png";
-// import thumbsUpIcon from "../../assets/icons/thumbs_up_icon.png"
+ import chairIcon from "../../assets/icons/chair_icon.png";
+ import chair02Icon from "../../assets/icons/chair_02_icon.png";
+ import cubeIcon from "../../assets/icons/cube_icon.png";
+ import eyesIcon from "../../assets/icons/eyes_icon.png";
+ import starIcon from "../../assets/icons/star_icon.png";
+ import thumbsUpIcon from "../../assets/icons/thumbs_up_icon.png"
 gsap.registerPlugin(ScrollTrigger);
 
 const Sidebar = () => {
     const imgRef = useRef(null);
     useEffect( () => {
         const el = imgRef.current;
-        gsap.fromTo(el, { rotation: 0 }, { rotation: 180, duration: 10, scrollTrigger: {
+        gsap.fromTo(el, { rotation: 0 }, { rotation: 0, duration: 10, scrollTrigger: {
             trigger: el
         } })
     }, []);
@@ -37,7 +37,7 @@ const Sidebar = () => {
                                 <img src={LogoSquare} alt="Best studio logo"/> 
                             </div>
                             <div className="face face2">
-                                <img src={LogoSquare} alt="Best studio logo"/>  
+                                <img src={eyesIcon} alt="Best studio logo"/>  
                             </div>
                             <div className="face face3">
                             <img src={LogoSquare} alt="Best studio logo"/>  
@@ -46,7 +46,7 @@ const Sidebar = () => {
                                 <img src={LogoSquare} alt="Best studio logo"/>  
                             </div>
                             <div className="face face5">
-                                <img src={LogoSquare} alt="Best studio logo"/>  
+                                <img src={thumbsUpIcon} alt="Best studio logo"/>  
                             </div>
                             <div className="face face6">
                                 <img src={LogoSquare} alt="Best studio logo"/>  
@@ -75,19 +75,19 @@ const Sidebar = () => {
                 <ul className="link-tree">
                     <li>
                         <Link exact="true" activeclassname="active" className='nav-link about' to="/WhatsBest">
-                            <FontAwesomeIcon icon={faHome}/>
-                            <p>What's Best</p>
+                            <img className="nav-icon" src={chairIcon} alt="find out what's best"/>
+                            <p>What's <br></br>Best</p>
                         </Link>
                     </li>
                     <li>
                         <Link exact="true" activeclassname="active" className='nav-link cases' to="/BestCase">
-                            <FontAwesomeIcon icon={faBookmark}/>
+                            <img className="nav-icon" src={thumbsUpIcon} alt="view case studies"/>
                             <p>Best Case Scenarios</p>
                         </Link>
                     </li>
                     <li>
                         <Link exact="true" activeclassname="active" className='nav-link friends' to="/BestFriends">
-                            <FontAwesomeIcon icon={faUser}/>
+                            <img className="nav-icon" src={eyesIcon} alt="read testimonials"/>
                             <p>Best Friends</p>
                         </Link>
                     </li>

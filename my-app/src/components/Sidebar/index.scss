@@ -57,12 +57,13 @@
         border-bottom: none;
         border-right: 1px solid $primary-color;
         width: 8vw;
+        min-width: 150px;
         height: 100vh;
         position: relative;
         top: 0;
         z-index: 99;
         overflow-y: none;
-        padding: 30px 20px;
+        padding: 30px 5px;
     }
     .nav-bar {
         display: block;
@@ -72,8 +73,12 @@
         margin: 8px auto;
         width: 100%;
     }
+    .link-tree {
+      margin-top: 60px;
+    }
     .nav-link {
         padding: 10px 0;
+        max-width: 100%;
     }
     .social {
         position: absolute;
@@ -97,6 +102,18 @@
     list-style-type: none;
     padding-left: 0;
 }
+.link-tree li {
+  border: 1px solid #000;
+  margin: 2.5px 10px;
+
+  .nav-link {
+    padding: 0;
+  }
+  p {
+    border-left: 1px solid #000;
+    padding: 5px;
+  }
+}
 
 .logo {
     display: block;
@@ -118,21 +135,31 @@
     text-transform: uppercase;
     text-decoration: none;
 }
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  padding: 5px;
+  display: block;
+}
+
 .nav-link.about:hover, .nav-link.about.active {
     transition: ease-in-out .15s;
-    color: $green;
+    background-color: $green;
 }
 .nav-link.cases:hover, .nav-link.cases.active {
     transition: ease-in-out .15s;
-    color: $orange;
+    background-color: $orange;
 }
 .nav-link.friends:hover, .nav-link.friends.active {
     transition: ease-in-out .15s;
-    color: $blue;
+    background-color: $blue;
 }
 
 .nav-link p {
-    margin: 0 0 0 10px;
+    margin: 0;
+    width: 102px;
+    padding-left: 8px !important;
 }
 
 .nav-link.cases {
@@ -339,7 +366,6 @@
   .face img {
     height: 70%;
     width: 70%;
-    background-color: $white;
   }
   .face1 {
     background-color: $green
@@ -358,5 +384,17 @@
   }
   .face6 {
     background-color: $white
+  }
+  .face1 img {
+    background-color: $white;
+  }
+  .face3 img {
+    background-color: $white;
+  }
+  .face4 img {
+    background-color: $white;
+  }
+  .face6 img {
+    background-color: $white;
   }
 //end spincube logo
