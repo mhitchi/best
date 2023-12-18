@@ -1,7 +1,6 @@
 @import '../../App.scss';
 
 
-
 @media (max-width: 767px) {
     .nav-daddy {
         background-color: $background-color;
@@ -80,6 +79,8 @@
         position: absolute;
         display: block;
         bottom:80px;
+        right: 30%;
+        padding: 0;
         list-style-type: none;
         margin: auto;
     }
@@ -150,6 +151,7 @@
     padding-left: 1.5px
 }
 
+
 .social li a {
     color: $primary-color
 }
@@ -160,3 +162,201 @@
     color: $yellow;
 }
 
+//start spincube OG
+// .stage-cube-cont {
+//     width: 60%;
+//     height: 100%;
+//     top: 60%;
+//     padding-top: 18%;
+//     margin-left: 0;
+//     position: absolute;
+//     right: 20%;
+//     overflow: hidden;
+//   }
+  
+//   .cube-spinner {
+//     animation-name: spincube;
+//     animation-timing-function: ease-in-out;
+//     animation-iteration-count: infinite;
+//     animation-duration: 12s;
+//     transform-style: preserve-3d;
+//     transform-origin : 2vw 2vw 0;
+//     margin-left: calc(50% - 2vw);
+//     height: 4vw;
+//     width: 4vw;
+  
+//     div {
+//       position: absolute;
+//       width: 4vw;
+//       height: 4vw;
+//       // background: rgba(255,255,255,0.4);
+//       margin: 0 auto;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       box-shadow: 0 0 5px 0px $pink;
+//     }
+  
+//     .face1 {
+//       transform: translateZ(2vw)
+//     }
+//     .face2 {
+//       transform: rotateY(90deg) translateZ(2vw)
+//     }
+//     .face3 {
+//       transform: rotateY(90deg) rotateX(90deg) translateZ(2vw)
+//     }
+//     .face4 {
+//       transform: rotateY(180deg) rotateZ(90deg) translateZ(2vw)
+//     }
+//     .face5 {
+//       transform: rotateY(-90deg) rotateZ(90deg) translateZ(2vw)
+//     }
+//     .face6 {
+//       transform: rotateX(-90deg) translateZ(2vw)
+//     }
+//   }
+  
+//   @keyframes spincube {
+//     from,
+//     to {
+//       transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+//     }
+//     16% {
+//       transform: rotateY(-90deg)
+//     }
+//     33% {
+//       transform: rotateY(-90deg) rotateZ(90deg)
+//     }
+//     50% {
+//       transform: rotateY(-180deg) rotateZ(90deg)
+//     }
+//     66% {
+//       transform: rotateY(-270deg) rotateZ(90deg)
+//     }
+//     83% {
+//       transform: rotateX(-90deg) rotateZ(90deg)
+//     }
+//   }
+//   .face img {
+//     height: 70%;
+//     width: 70%;
+//   }
+//   .face1 {
+//     background-color: $green
+//   }
+//   .face2 {
+//     background-color: $orange
+//   }
+//   .face3 {
+//     background-color: $pink
+//   }
+//   .face4 {
+//     background-color: $blue
+//   }
+//   .face5 {
+//     background-color: $yellow
+//   }
+//   .face6 {
+//     background-color: $white
+//   }
+  // end spincube
+
+//start spincube logo
+.stage-cube-cont {
+    width: 100%;
+    height: 100%;
+    top: 5%;
+    padding-top: 18%;
+    margin: auto;
+
+  }
+  
+  .cube-spinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin : 3vw 3vw 0;
+    margin-left: calc(50% - 3vw);
+    height: 6vw;
+    width: 6vw;
+  
+    div {
+      position: absolute;
+      width: 6vw;
+      height: 6vw;
+      // background: rgba(255,255,255,0.4);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 5px 0px $pink;
+    }
+  
+    .face1 {
+      transform: translateZ(3vw)
+    }
+    .face2 {
+      transform: rotateY(90deg) translateZ(3vw)
+    }
+    .face3 {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(3vw)
+    }
+    .face4 {
+      transform: rotateY(180deg) rotateZ(90deg) translateZ(3vw)
+    }
+    .face5 {
+      transform: rotateY(-90deg) rotateZ(90deg) translateZ(3vw)
+    }
+    .face6 {
+      transform: rotateX(-90deg) translateZ(3vw)
+    }
+  }
+  
+  @keyframes spincube {
+    from,
+    to {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      transform: rotateY(-90deg)
+    }
+    33% {
+      transform: rotateY(-90deg) rotateZ(90deg)
+    }
+    50% {
+      transform: rotateY(-180deg) rotateZ(90deg)
+    }
+    66% {
+      transform: rotateY(-270deg) rotateZ(90deg)
+    }
+    83% {
+      transform: rotateX(-90deg) rotateZ(90deg)
+    }
+  }
+  .face img {
+    height: 70%;
+    width: 70%;
+    background-color: $white;
+  }
+  .face1 {
+    background-color: $green
+  }
+  .face2 {
+    background-color: $orange
+  }
+  .face3 {
+    background-color: $pink
+  }
+  .face4 {
+    background-color: $blue
+  }
+  .face5 {
+    background-color: $yellow
+  }
+  .face6 {
+    background-color: $white
+  }
+//end spincube logo
