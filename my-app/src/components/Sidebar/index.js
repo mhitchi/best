@@ -6,22 +6,32 @@ import { faHome, faUser, faBookmark, faSquareEnvelope } from "@fortawesome/free-
 import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
-import chairIcon from "../../assets/icons/chair_icon.png";
-import chair02Icon from "../../assets/icons/chair_02_icon.png";
-import cubeIcon from "../../assets/icons/cube_icon.png";
-import eyesIcon from "../../assets/icons/eyes_icon.png";
-import starIcon from "../../assets/icons/star_icon.png";
-import thumbsUpIcon from "../../assets/icons/thumbs_up_icon.png"
+// import chairIcon from "../../assets/icons/chair_icon.png";
+// import chair02Icon from "../../assets/icons/chair_02_icon.png";
+// import cubeIcon from "../../assets/icons/cube_icon.png";
+// import eyesIcon from "../../assets/icons/eyes_icon.png";
+// import starIcon from "../../assets/icons/star_icon.png";
+// import thumbsUpIcon from "../../assets/icons/thumbs_up_icon.png"
+gsap.registerPlugin(ScrollTrigger);
 
 const Sidebar = () => {
+    const imgRef = useRef(null);
+    useEffect( () => {
+        const el = imgRef.current;
+        gsap.fromTo(el, { rotation: 0 }, { rotation: 180, duration: 10, scrollTrigger: {
+            trigger: el
+        } })
+    }, []);
     return (
         <>
         <div className="nav-daddy">
             <div className='nav-bar'>
                 <Link className='logo' to='/'>
                     {/* <img src={LogoSquare} alt="click to go home"/> */}
-                    <div className="stage-cube-cont">
+                    
+                    <div className="stage-cube-cont" ref={imgRef}>
                         <div className="cube-spinner">
                             <div className="face face1">
                                 <img src={LogoSquare} alt="Best studio logo"/> 
