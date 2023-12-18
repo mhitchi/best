@@ -15,7 +15,7 @@ const Home = () => {
             <div className="text-zone">
                 <h1>BEST home</h1>
             </div>
-            <div className="stage-cube-cont">
+            {/* <div className="stage-cube-cont">
                 <div className="cube-spinner">
                     <div className="face1">
                            <img src={chair02Icon} alt="chair icon"/> 
@@ -36,7 +36,7 @@ const Home = () => {
                            <img src={starIcon} alt="star icon"/> 
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
         <img className="loader" src={starIcon} alt="loader star"/>
         </>

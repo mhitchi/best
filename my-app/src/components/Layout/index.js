@@ -12,11 +12,11 @@ const Layout = () => {
           behavior: 'smooth'
         });
       }
-      
+
     return (
         <>
         <Sidebar/>
-        <div className="page container" onWheel={handleScroll}>
+        <div className="page layout container" onWheel={handleScroll}>
             <span className="tags top-tags">&lt;body&gt;</span>
             <Outlet />
             <span className="tags bottom-tags">
