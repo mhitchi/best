@@ -1,5 +1,10 @@
 @import '../../App.scss';
 
+.nav-daddy {
+  position: fixed;
+  left: 0;
+  z-index: 99;
+}
 
 @media (max-width: 767px) {
     .nav-daddy {
@@ -7,9 +12,8 @@
         border-bottom: 1px solid $primary-color;
         width: 90vw;
         height: 100px;
-        position: absolute;
+        // position: absolute;
         top: 0;
-        z-index: 99;
         overflow-y: none;
         padding: 5px 20px;
     }
@@ -59,9 +63,8 @@
         width: 8vw;
         min-width: 150px;
         height: 100vh;
-        position: relative;
+        // position: relative;
         top: 0;
-        z-index: 99;
         overflow-y: none;
         padding: 30px 5px;
     }

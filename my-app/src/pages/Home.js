@@ -1,18 +1,20 @@
 import '../App.scss';
 import starIcon from "../assets/icons/star_icon.png";
-
-
+import HomeContent from '../components/Content/Home';
+import WhatsBestContent from '../components/Content/WhatsBest';
+import BestCaseContent from '../components/Content/BestCase';
+import BestFriendsContent from '../components/Content/BestFriends';
 
 const Home = () => {
     return (
         <>
-        <div className= "container home-page">
-            <div className="text-zone">
-                <h1>BEST home</h1>
-            </div>
-            
-        </div>
-        <img className="loader" src={starIcon} alt="loader star"/>
+        <ul className="parent">
+            <li><HomeContent/></li>
+            <li><WhatsBestContent/></li>
+            <li><BestCaseContent/></li>
+            <li><BestFriendsContent/></li>
+        </ul>
+            <img className="loader" src={starIcon} alt="loader star"/>
         </>
     )
 }

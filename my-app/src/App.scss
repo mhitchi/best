@@ -45,12 +45,28 @@ h4, h5, h6, p {
   font-weight: bold;
 }
 
-.text-zone {
+.parent {
   position: absolute;
   left: 10%;
   top: 10%;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
   // transform: translateY(-50%);
   // width: 40%;
+}
+
+ul.parent li:nth-child(2n) {
+  position: absolute;
+  left: 100vw;
+}
+ul.parent li:nth-child(3n) {
+  position: absolute;
+  left: 200vw;
+}
+ul.parent li:nth-child(4n) {
+  position: absolute;
+  left: 300vw;
 }
 
 .about-page {
