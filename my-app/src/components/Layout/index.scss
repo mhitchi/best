@@ -29,11 +29,28 @@
     will-change: contents;
     height: 100vh;
     min-height: 566px;
-    position: absolute;
+    // position: absolute;
     opacity: 0.5;
-    top: 5%;
+    top: 0%;
     margin: 0 auto;
     z-index: 1;
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
+}
+
+.svg {
+    position: fixed;
+    top: 3em;
+    left: 15vw;
+    width: 50vw;
+
+    .mask {
+        width: 0;
+    }
+}
+
+
+.parent {
+    display: flex;
+    flex-direction: column;
 }

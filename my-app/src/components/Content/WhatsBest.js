@@ -4,7 +4,7 @@ const WhatsBestContent = () => {
     return (
         <>
         <div className="container about-page">
-            <div className="text-zone">
+            <div className="text-zone anim">
                 <h1>WHAT'S BEST</h1>
                 
             </div>
