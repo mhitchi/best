@@ -21,7 +21,7 @@ const Layout = () => {
     gsap.to(mask, {
         width: "100%",
         scrollTrigger: {
-          trigger: ".wrapper",
+          trigger: ".parent",
           start: "top left",
           scrub: 1
         }
@@ -35,19 +35,19 @@ const Layout = () => {
       
     useEffect(() => {
 
-        let roughKids= document.getElementsByClassName('kids');
-    let kids = Array.from(roughKids);
-    let colors = ["#009c73", "#ffd800", "#e65925", "#2b93d1"]
-    //kids logging undefined
-    console.log(roughKids)
-    console.log(kids)
-    console.log(colors)
+    //     let roughKids= document.getElementsByClassName('kids');
+    // let kids = Array.from(roughKids);
+    // let colors = ["#009c73", "#ffd800", "#e65925", "#2b93d1"]
+    // //kids logging undefined
+    // console.log(roughKids)
+    // console.log(kids)
+    // console.log(colors)
     
 
-    for (let i = 0; i < kids.length; i++) {
+    // for (let i = 0; i < kids.length; i++) {
        
-        kids[i].style={backgroundColor: `${colors[i]}`}
-    }
+    //     kids[i].style={backgroundColor: `${colors[i]}`}
+    // }
     
         const ctx = gsap.context((self) => {  
         const sections = self.selector("li");
