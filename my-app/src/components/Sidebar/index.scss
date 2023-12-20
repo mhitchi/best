@@ -9,7 +9,7 @@
 @media (max-width: 767px) {
     .nav-daddy {
         background-color: $background-color;
-        border-bottom: 1px solid $primary-color;
+        border-bottom: 3px solid $primary-color;
         width: 90vw;
         height: 100px;
         // position: absolute;
@@ -59,8 +59,8 @@
     .nav-daddy {
         background-color: $background-color;
         border-bottom: none;
-        border-right: 1px solid $primary-color;
-        width: 8vw;
+        border-right: 3px solid $primary-color;
+        width: 11vw;
         min-width: 150px;
         height: 100vh;
         // position: relative;
@@ -106,14 +106,14 @@
     padding-left: 0;
 }
 .link-tree li {
-  border: 1px solid #000;
-  margin: 2.5px 10px;
+  border: 2px solid #000;
+  margin: -2px 10px;
 
   .nav-link {
     padding: 0;
   }
   p {
-    border-left: 1px solid #000;
+    border-left: 2px solid #000;
     padding: 5px;
   }
 }
@@ -131,6 +131,7 @@
 }
 
 .nav-link {
+  width: 100%;
     display: inline-flex;
     font-family: $header-font;
     color: $primary-color;
@@ -142,7 +143,7 @@
   width: 20px;
   height: 20px;
   margin: auto;
-  padding: 5px;
+  padding: 2px;
   display: block;
 }
 
