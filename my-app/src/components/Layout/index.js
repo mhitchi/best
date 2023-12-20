@@ -7,14 +7,14 @@ import { ScrollToPlugin, ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const Layout = () => {
-    gsap.registerPlugin(ScrollTrigger);
 
     // start scrolltrigger mask svg
 
-    const container = document.querySelector('.containerScroll');
-    const sections = gsap.utils.toArray('.containerScroll .parent li');
-    const texts = gsap.utils.toArray('.anim');
+    // const container = document.querySelector('.containerScroll');
+    // const sections = gsap.utils.toArray('.containerScroll .parent li');
+    // const texts = gsap.utils.toArray('.anim');
     const mask = document.querySelector('.mask');
   
 
@@ -33,7 +33,22 @@ const Layout = () => {
       const secondRef = useRef();
       const wrapperRef = useRef();
       
-        useEffect(() => {
+    useEffect(() => {
+
+        let roughKids= document.getElementsByClassName('kids');
+    let kids = Array.from(roughKids);
+    let colors = ["#009c73", "#ffd800", "#e65925", "#2b93d1"]
+    //kids logging undefined
+    console.log(roughKids)
+    console.log(kids)
+    console.log(colors)
+    
+
+    for (let i = 0; i < kids.length; i++) {
+       
+        kids[i].style={backgroundColor: `${colors[i]}`}
+    }
+    
         const ctx = gsap.context((self) => {  
         const sections = self.selector("li");
        
@@ -71,6 +86,16 @@ const Layout = () => {
               start: "center center"
             }
         })
+
+        gsap.to(".red", {
+            scrollTrigger: {
+              trigger: ".red",
+              toggleActions: "restart pause reverse pause"
+            }, 
+            duration: 1, 
+            backgroundColor: "#FFA500", 
+            ease: "none"
+          });
           
           }, wrapperRef);
           return () => ctx.revert();
@@ -99,8 +124,9 @@ const Layout = () => {
           behavior: 'smooth',
           markers: true,
         });
+        
       }
-
+    
     return (
         <>
         <Sidebar/>

@@ -49,8 +49,8 @@ h4, h5, h6, p {
 
 .parent {
   position: absolute;
-  left: 10%;
-  top: 10%;
+  left: 2%;
+  top: 20%;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
@@ -180,3 +180,9 @@ ul.parent li:nth-child(4n) {
   }
 }
 
+.page {
+  cursor: url('./assets/pointers/pointer-md.png'), auto
+}
+.parent li:last-child {
+  cursor: url('./assets/pointers/pointer-back-md.png'), auto
+}
