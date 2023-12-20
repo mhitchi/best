@@ -10,8 +10,8 @@ const Layout = () => {
 
     // start scrolltrigger mask svg
 
-    const container = document.querySelector('.container');
-    const sections = gsap.utils.toArray('.container .parent li');
+    const container = document.querySelector('.containerScroll');
+    const sections = gsap.utils.toArray('.containerScroll .parent li');
     const texts = gsap.utils.toArray('.anim');
     const mask = document.querySelector('.mask');
 
@@ -25,6 +25,15 @@ const Layout = () => {
             end: '+=3000'
         }
     })
+
+    gsap.to(mask, {
+        width: "100%",
+        scrollTrigger: {
+          trigger: ".wrapper",
+          start: "top left",
+          scrub: 1
+        }
+      });
 
     // end scrolltrigger mask svg
 
@@ -60,7 +69,7 @@ const Layout = () => {
                 <rect class="mask" y="-49" height="99" fill="black"/>
                 </g>
             </svg>
-        <div className="page layout container" onWheel={handleScroll}>
+        <div className="page layout containerScroll" onWheel={handleScroll}>
             <span className="tags top-tags"></span>
             
             <Outlet />

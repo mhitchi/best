@@ -38,6 +38,10 @@
     animation: fadeIn 1s forwards;
 }
 
+.containerScroll {
+    overflow-y: hidden;
+}
+
 .svg {
     position: fixed;
     top: 3em;
