@@ -9,6 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Layout = () => {
+    // let nav = document.querySelector('nav-daddy');
+    // nav.addEventListener('click', () => {
+    //     window.scrollTo(0, 0);
+    // })
 
     // start scrolltrigger mask svg
 
@@ -16,14 +20,14 @@ const Layout = () => {
     // const sections = gsap.utils.toArray('.containerScroll .parent li');
     // const texts = gsap.utils.toArray('.anim');
     const mask = document.querySelector('.mask');
-  
 
     gsap.to(mask, {
         width: "100%",
         scrollTrigger: {
-          trigger: ".parent",
+          trigger: ".page",
           start: "top left",
-          scrub: 1
+          scrub: 1,
+          pinReparent: true
         }
       });
 
@@ -59,7 +63,7 @@ const Layout = () => {
           scrollTrigger: {
             trigger: wrapperRef.current,
             pin: true,
-            markers: true,
+            // markers: true,
             scrub: 1,
             end: () => "+=" + document.querySelector(".page").offsetWidth
           }
@@ -71,7 +75,7 @@ const Layout = () => {
             scrollTrigger: {
               trigger:firstRef.current,
               containerAnimation: horizontalTween,
-              markers:true,
+            //   markers:true,
               start: "center center"
             }
         })
@@ -82,20 +86,11 @@ const Layout = () => {
             scrollTrigger: {
               trigger:secondRef.current,
                containerAnimation: horizontalTween,
-              markers:true,
+            //   markers:true,
               start: "center center"
             }
         })
 
-        gsap.to(".red", {
-            scrollTrigger: {
-              trigger: ".red",
-              toggleActions: "restart pause reverse pause"
-            }, 
-            duration: 1, 
-            backgroundColor: "#FFA500", 
-            ease: "none"
-          });
           
           }, wrapperRef);
           return () => ctx.revert();
@@ -122,7 +117,7 @@ const Layout = () => {
           top: 0,
           left: container.scrollLeft + scrollAmount,
           behavior: 'smooth',
-          markers: true,
+        //   markers: true,
         });
         
       }

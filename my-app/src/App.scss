@@ -48,13 +48,19 @@ h4, h5, h6, p {
 
 .parent {
   position: absolute;
-  left: 2%;
-  top: 20%;
+  // left: 2%;
+  top: 9.15%;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
   // transform: translateY(-50%);
   // width: 40%;
+}
+
+
+.text-zone {
+  margin-top: 8%;
+  margin-left: 5%
 }
 
 ul.parent li:nth-child(2n) {
@@ -70,11 +76,7 @@ ul.parent li:nth-child(4n) {
   left: 300vw;
 }
 
-.about-page {
-  .text-zone {
-    left: 10%
-  }
-}
+
 
 .loader {
   display: block;
