@@ -36,7 +36,7 @@ const Sidebar = () => {
         <>
         <div className="nav-daddy">
             <div className='nav-bar'>
-                <Link className='logo' to='/'>
+            <Link className='logo' to='/'>
                     {/* <img src={LogoSquare} alt="click to go home"/> */}
                     
                     <div className="stage-cube-cont" ref={imgRef} onClick={handleClick}>
@@ -110,6 +110,7 @@ const Sidebar = () => {
                 {/* insta link */}
             </ul>
         </div>
+        
         </>
     )
 }
