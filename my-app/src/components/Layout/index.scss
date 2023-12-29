@@ -83,18 +83,18 @@
 //end test
 
 //colorful backgrounds
-.parent li:first-child {
+.parent li.home {
     background-color: #009c73
 }
 
-.parent li:nth-child(2n) {
+.parent li.what {
     background-color: #ffd800;
 }
 
-.parent li:nth-child(3n) {
+.parent li.case {
     background-color: #e65925;
 }
 
-.parent li:last-child {
+.parent li.friends {
     background-color: #2b93d1;
 }

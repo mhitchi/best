@@ -9,10 +9,10 @@ const BestFriends = () => {
     return (
         <>
         <ul className="parent">
-            <li className="kids"><BestFriendsContent/></li>
-            <li className="kids"><HomeContent/></li>
-            <li className="kids"><WhatsBestContent/></li>
-            <li className="kids"><BestCaseContent/></li>
+            <li className="kids friends"><BestFriendsContent/></li>
+            <li className="kids home"><HomeContent/></li>
+            <li className="kids what"><WhatsBestContent/></li>
+            <li className="kids case"><BestCaseContent/></li>
         </ul>
             <img className="loader" src={starIcon02} alt="loader star"/>
         </>

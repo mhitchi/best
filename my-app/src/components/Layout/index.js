@@ -1,6 +1,6 @@
 import './index.scss';
 import Sidebar from '../Sidebar';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Layout = () => {
+
+
     // let nav = document.querySelector('nav-daddy');
     // nav.addEventListener('click', () => {
     //     window.scrollTo(0, 0);
@@ -30,7 +32,7 @@ const Layout = () => {
           pinReparent: true
         }
       });
-
+      
       //start test
 
       const firstRef = useRef();
