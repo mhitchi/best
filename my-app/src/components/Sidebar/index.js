@@ -10,7 +10,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect, useState } from "react";
  import chairIcon from "../../assets/icons/chair_icon.png";
  import eyesIcon from "../../assets/icons/eyes_icon.png";
- import thumbsUpIcon from "../../assets/icons/thumbs_up_icon.png"
+ import thumbsUpIcon from "../../assets/icons/thumbs_up_icon.png";
+ import chair2Icon from "../../assets/icons/chair_02_icon.png";
+import cubeIcon from "../../assets/icons/cube_icon.png";
+import starIcon from "../../assets/icons/star_icon.png";
+import star2Icon from "../../assets/icons/star_icon_02.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const Sidebar = () => {
@@ -38,22 +42,22 @@ const Sidebar = () => {
                     <div className="stage-cube-cont" ref={imgRef} onClick={handleClick}>
                         <div className="cube-spinner">
                             <div className="face face1">
-                                <img src={LogoSquare} alt="Best studio logo"/> 
+                                <img src={chair2Icon} alt="Click icon to go home"/> 
                             </div>
                             <div className="face face2">
-                                <img src={eyesIcon} alt="Best studio logo"/>  
+                                <img src={eyesIcon} alt="Click icon to go home"/>  
                             </div>
                             <div className="face face3">
-                            <img src={LogoSquare} alt="Best studio logo"/>  
+                            <img src={star2Icon} alt="Click icon to go home"/>  
                             </div>
                             <div className="face face4">
-                                <img src={LogoSquare} alt="Best studio logo"/>  
+                                <img src={cubeIcon} alt="Click icon to go home"/>  
                             </div>
                             <div className="face face5">
-                                <img src={thumbsUpIcon} alt="Best studio logo"/>  
+                                <img src={thumbsUpIcon} alt="Click icon to go home"/>  
                             </div>
                             <div className="face face6">
-                                <img src={LogoSquare} alt="Best studio logo"/>  
+                                <img src={starIcon} alt="Click icon to go home"/>  
                             </div>
                             {/* <div className="face face1">
                                 <img src={chair02Icon} alt="chair icon"/> 

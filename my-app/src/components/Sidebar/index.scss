@@ -184,13 +184,39 @@
 
 
 .social li a {
-    color: $primary-color
+    animation: change-color 10s ease infinite;
 }
+.social li:first-child a {
+  animation-direction: reverse;
+}
+
 .social li:first-child a:hover {
     color: $pink;
 }
 .social li:last-child a:hover {
     color: $yellow;
+}
+
+@keyframes change-color {
+  0% {
+    color: $pink
+  }
+  20% {
+    color: $yellow
+  }
+  40% {
+    color: $orange
+  }
+  60% {
+    color: $blue
+  }
+  80% {
+    color: $green
+  }
+  100% {
+    color: $yellow
+  }
+
 }
 
 //start spincube logo

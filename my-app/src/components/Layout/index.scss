@@ -84,17 +84,21 @@
 
 //colorful backgrounds
 .parent li.home {
-    background-color: #009c73
+    // background-color: #009c73
+    background: linear-gradient(90deg, rgba(0,156,115,1) 75%, rgba(255,216,0,1) 100%);
 }
 
 .parent li.what {
-    background-color: #ffd800;
+    //background-color: #ffd800;
+    background: linear-gradient(90deg, rgba(255,216,0,1) 75%, rgba(230,89,37,1) 100%);
 }
 
 .parent li.case {
-    background-color: #e65925;
+    //background-color: #e65925;
+    background: linear-gradient(90deg, rgba(230,89,37,1) 75%, rgba(43,147,209,1) 100%);
 }
 
 .parent li.friends {
-    background-color: #2b93d1;
+    //background-color: #2b93d1;
+    background: linear-gradient(90deg, rgba(43,147,209,1) 75%, rgba(0,156,115,1) 100%);
 }
