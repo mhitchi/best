@@ -18,6 +18,10 @@ import star2Icon from "../../assets/icons/star_icon_02.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const Sidebar = () => {
+    //adding scroll trigger for css for cube spin
+    window.addEventListener('scroll', () => {
+        document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+      }, false);
 
     const [position, setPosition] = useState('0,0')
 

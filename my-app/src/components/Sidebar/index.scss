@@ -99,7 +99,7 @@
         width: 100%;
     }
     .link-tree {
-      margin-top: 60px;
+      margin-top: 30px;
     }
     .nav-link {
         padding: 10px 0;
@@ -243,6 +243,8 @@
   
   .cube-spinner {
     animation-name: spincube;
+    animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -2s);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 12s;
