@@ -244,7 +244,7 @@
   .cube-spinner {
     animation-name: spincube;
     animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -2s);
+  animation-delay: calc(var(--scroll) * 0.5s);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 12s;

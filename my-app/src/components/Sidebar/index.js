@@ -20,7 +20,11 @@ gsap.registerPlugin(ScrollTrigger);
 const Sidebar = () => {
     //adding scroll trigger for css for cube spin
     window.addEventListener('scroll', () => {
-        document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+         document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+        //  document.body.style.setProperty('--scroll', window.pageXOffset / (document.body.offsetWidth - window.innerWidth));
+        // let cube = document.querySelector("#spinCube");
+        // // console.log(cube)
+        // cube.style={animationDuration: '4s' }
       }, false);
 
     const [position, setPosition] = useState('0,0')
@@ -44,7 +48,7 @@ const Sidebar = () => {
                     {/* <img src={LogoSquare} alt="click to go home"/> */}
                     
                     <div className="stage-cube-cont" ref={imgRef} onClick={handleClick}>
-                        <div className="cube-spinner">
+                        <div className="cube-spinner" id="spinCube">
                             <div className="face face1">
                                 <img src={chair2Icon} alt="Click icon to go home"/> 
                             </div>
