@@ -9,14 +9,13 @@ import ContactContent from '../components/Content/Contact';
 const Home = () => {
     return (
         <>
-        <ul className="parent">
+        <ul className="parent horizontal_scroll">
             <li className="kids home"><HomeContent/></li>
             <li className="kids what"><WhatsBestContent/></li>
             <li className="kids case"><BestCaseContent/></li>
             <li className="kids friends"><BestFriendsContent/></li>
         </ul>
             <img className="loader" src={starIcon} alt="loader star"/>
-            <div className="contact"><ContactContent/></div>
         </>
     )
 }

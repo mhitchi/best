@@ -9,14 +9,13 @@ import ContactContent from '../components/Content/Contact';
 const WhatsBest = () => {
     return (
         <>
-        <ul className="parent">
+        <ul className="parent horizontal_scroll">
             <li className="kids what"><WhatsBestContent/></li>
             <li className="kids case"><BestCaseContent/></li>
             <li className="kids friends"><BestFriendsContent/></li>
             <li className="kids home"><HomeContent/></li>
         </ul>
             <img className="loader" src={starIcon03} alt="loader"/>
-            <div className="contact"><ContactContent/></div>
         </>
     )
 }

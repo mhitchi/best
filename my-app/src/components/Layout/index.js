@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/ScrollTrigger';
+import ContactContent from '../Content/Contact';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,9 +146,14 @@ const Layout = () => {
       </div> */}
 
 {/* end */}
-            <Outlet />
+            <div className="scroll_container">
+                <div className="sticky_wrap">
+                  <Outlet />
+                </div>
+            </div>
             
-        </div>
+          </div>
+          <div className="contact"><ContactContent/></div>
         
         </>
     )

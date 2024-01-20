@@ -1,235 +1,109 @@
 @import '../../App.scss';
 
-.nav-daddy {
+.nav {
   position: fixed;
+  width: 100;
+  top: 0;
   left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   z-index: 99;
 }
 
-@media (max-width: 767px) {
-    .nav-daddy {
-        background-color: $background-color;
-        border-bottom: 3px solid $primary-color;
-        width: 90vw;
-        height: 100px;
-        // position: absolute;
-        top: 0;
-        overflow-y: none;
-        padding: 5px 20px;
-    }
-    .nav-bar {
-        width: 100%;
-        padding: 0;
-        display: flex;
-    }
-    .link-tree {
-        width: 50%;
-        padding: 0px auto;
-        margin-left: -80px
-    }
-    .link-tree li {
-        display: inline-block;
-    }
-    .link-tree li:first-child {
-        padding-right: 10px;
-    }
-    .logo {
-      position: absolute;
-      bottom: 5vh;
-      left: 93vw;
-      z-index: 999;
-    }
-    .logo img {
-        margin: 0px auto;
-        width: 30%;
-    }
+// .nav-col {
+//   width: 20%
+// }
 
-    .social {
-        position: absolute;
-        display: block;
-        top: 15px;
-        right: 10px;
-        list-style-type: none;
-        margin: auto;
-    }
-    
-    .social li {
-        font-size: 30px;
-        display: block;
-    }
-    .social li:first-child {
-        padding-right: 5px;
-    }
+.nav-col:last-child {
+  // width: 10%;
+  align-items: flex-end;
 }
-@media (min-width: 768px) {
-    .nav-daddy {
-        background-color: $background-color;
-        border-bottom: none;
-        border-right: 3px solid $primary-color;
-        width: 11vw;
-        min-width: 150px;
-        height: 100vh;
-        // position: relative;
-        top: 0;
-        overflow-y: none;
-        padding: 30px 5px;
-    }
-    .nav-bar {
-        display: block;
-    }
-
-    .logo {
-      width: 30%;
-      position: absolute;
-      bottom: 5vh;
-      left: 93vw;
-      z-index: 999;
-      padding: 8px 0;
+@media (max-width: 768px) {
+ 
+  .nav {
+    border: 5px solid black;
+  }
+  .nav-col a img {
+    max-width: 81vw;
+    margin: -2px -2px -8px -2px;
+  }
+  .nav-col:first-child {
+    width: 50%;
   }
   
-  .logo:hover img {
-      box-sizing: border-box;
-      transition: ease-in .07s;
-      border: 2px solid $primary-color;
-      margin-bottom: 7.75px
+   .nav-col .icon {
+    display: none;
+    height: 40px;
+    width: 40px;
+   }
+   .nav-col .icon:nth-child(3n) {
+    display: block;
+    margin-right: 15px;
+    margin-top: 15px;
+   }
+
   }
-    .logo img {
-        display: block;
-        margin: 4px auto;
-        width: 100%;
-    }
-    .link-tree {
-      margin-top: 30px;
-    }
-    .nav-link {
-        padding: 10px 0;
-        max-width: 100%;
-    }
-    .social {
-        position: absolute;
-        display: block;
-        bottom:80px;
-        right: 30%;
-        padding: 0;
-        list-style-type: none;
-        margin: auto;
-    }
-    
-    .social li {
-        font-size: 30px;
-        display: inline-block;
-    }
-    .social li:first-child {
-        padding-right: 5px;
-    }
-}
-
-.link-tree {
-    list-style-type: none;
-    padding-left: 0;
-}
-.link-tree li {
-  border: 2px solid #000;
-  margin: -2px 10px;
-
-  .nav-link {
-    padding: 0;
+@media (min-width: 768px) {
+  .nav {
+    padding: 24px 28px;
   }
-  p {
-    border-left: 2px solid #000;
-    padding: 5px;
-  }
-}
-
-
-.nav-link {
-  width: 100%;
-    display: inline-flex;
-    font-family: $header-font;
-    color: $primary-color;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-.nav-icon {
-  width: 20px;
-  height: 20px;
-  margin: auto;
-  padding: 2px;
-  display: block;
-}
-
-.nav-link.about:hover, .nav-link.about.active {
-    transition: ease-in-out .15s;
-    background-color: $green;
-}
-.nav-link.cases:hover, .nav-link.cases.active {
-    transition: ease-in-out .15s;
-    background-color: $orange;
-}
-.nav-link.friends:hover, .nav-link.friends.active {
-    transition: ease-in-out .15s;
-    background-color: $blue;
-}
-
-.nav-link p {
+  .nav-col a img {
+    max-width: 300px;
     margin: 0;
-    width: 102px;
-    padding-left: 8px !important;
+  }
+  .nav-col:first-child {
+    width: 50%;
+  }
+  
+   .nav-col .icon {
+
+    height: 30px;
+    width: 30px;
+   }
+   
 }
 
-.nav-link.cases {
-    padding-left: 2.5px;
-}
-
-.nav-link.cases p {
-    padding-left: 2.5px
-}
-
-.nav-link.friends {
-    padding-left: 1.5px;
-}
-
-.nav-link.friends p {
-    padding-left: 1.5px
-}
+// @media (min-width: 850px) and (max-width: 1200px ) {
+  
+// }
 
 
-.social li a {
-    animation: change-color 10s ease infinite;
-}
-.social li:first-child a {
-  animation-direction: reverse;
-}
-
-.social li:first-child a:hover {
-    color: $pink;
-}
-.social li:last-child a:hover {
-    color: $yellow;
-}
-
-@keyframes change-color {
+@keyframes toorange{
   0% {
-    color: $pink
-  }
-  20% {
-    color: $yellow
-  }
-  40% {
-    color: $orange
-  }
-  60% {
-    color: $blue
-  }
-  80% {
-    color: $green
+    fill: #fff
   }
   100% {
-    color: $yellow
+    fill: #e65925;
   }
-
 }
+@keyframes topink{
+  0% {
+    fill: #e65925
+  }
+  100% {
+    fill: #edaac6;
+  }
+}
+@keyframes toyellow{
+  0% {
+    fill: #edaac6;
+  }
+  100% {
+    fill: #ffd800
+  }
+}
+@keyframes toblack{
+  0% {
+    fill: #ffd800;
+  }
+  100% {
+    fill: #000
+  }
+}
+
+
 
 //start spincube logo
 .stage-cube-cont {

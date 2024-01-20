@@ -8,6 +8,7 @@ import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect, useState } from "react";
+import Logo from "../../assets/img/logo.png";
  import chairIcon from "../../assets/icons/chair_icon.png";
  import eyesIcon from "../../assets/icons/eyes_icon.png";
  import thumbsUpIcon from "../../assets/icons/thumbs_up_icon.png";
@@ -18,14 +19,84 @@ import star2Icon from "../../assets/icons/star_icon_02.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const Sidebar = () => {
-    //adding scroll trigger for css for cube spin
-    window.addEventListener('scroll', () => {
-         document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-        //  document.body.style.setProperty('--scroll', window.pageXOffset / (document.body.offsetWidth - window.innerWidth));
-        // let cube = document.querySelector("#spinCube");
-        // // console.log(cube)
-        // cube.style={animationDuration: '4s' }
-      }, false);
+
+    //start besttest
+const [ scrollPercentage, setScrollPercentage ] = useState(0);
+
+
+
+// //orange pink yellow black
+// window.addEventListener('scroll', (e) => {
+//   // document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+//   // console.log("scrolling")
+//   // const el = document.querySelector("#spinCube");
+//   // gsap.fromTo(el, { rotation: 0 }, { rotation: 0, duration: 10, scrollTrigger: {
+//   //     trigger: el
+//   // } })
+//   //create loop to apply transform to all sticky sections
+//   for(let i = 0; i < stickySections.length; i++){
+//     transform(stickySections[i])
+//   }
+// })
+
+// function transform(section) {
+
+//   const offsetTop = section.parentElement.offsetTop;
+
+//   const scrollSection = section.querySelector('.horizontal_scroll')
+
+//   let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+
+//   percentage = percentage < 0 ? 0 : percentage > 300 ? 300 : percentage;
+//   // note: 130-210 = scenario/orange
+//   // console.log(percentage)
+  
+//   //move horizontally depending on vertical scroll depth
+//   scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`
+//   scrollSection.style.webkitTransform = `-webkit-translate3d(${-(percentage)}vw, 0, 0); `
+  
+  
+//   // document.querySelector(".insta").style.animation = "rainbow01 20s 1";
+//   // document.querySelector(".email").style.animation = "rainbow02 20s 1";
+//   // //change svg color
+  
+  
+//   const colorTxt = [...document.querySelectorAll('.color-text')]
+//   const colorArr = ["#009c73", "#2b93d1", "#ffd800", "#e65925","#edaac6"]
+  
+  
+//   for (let i = 0; i< colorTxt.length; i++) {
+//     var rand = colorArr[(Math.random() * colorArr.length) | 0]
+//     colorTxt[i].style.color = rand
+//   }
+  
+
+    //end besttest
+
+    //adding scroll trigger for css for horizontal scroll
+    const handleScroll = () => {
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.documentElement.scrollHeight;
+        const currentPosition = window.scrollY;
+
+        const scrollPercentage = (currentPosition / (fullHeight - windowHeight)) * 100;
+        console.log(scrollPercentage)
+        setScrollPercentage(scrollPercentage)
+    }
+    // window.addEventListener('scroll', () => {
+    //      document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    //      const stickySections = [...document.querySelectorAll('.sticky_wrap')]
+    //     const scrollContents = [...document.querySelectorAll('.scroll_contents')]
+
+    //      const offsetTop = section.parentElement.offsetTop;
+    //      //  document.body.style.setProperty('--scroll', window.pageXOffset / (document.body.offsetWidth - window.innerWidth));
+    //     // let cube = document.querySelector("#spinCube");
+    //     // // console.log(cube)
+    //     // cube.style={animationDuration: '4s' }
+    //     let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+    //     console.log(percentage)
+    //     percentage = percentage < 0 ? 0 : percentage > 300 ? 300 : percentage;
+    //   }, false);
 
     const [position, setPosition] = useState('0,0')
 
@@ -35,16 +106,24 @@ const Sidebar = () => {
 
     const imgRef = useRef(null);
     useEffect( () => {
+        //spin the cube
         const el = imgRef.current;
         gsap.fromTo(el, { rotation: 0 }, { rotation: 0, duration: 10, scrollTrigger: {
             trigger: el
         } })
+        //scroll the scroll
+        window.addEventListener('scroll', handleScroll);
+
+        return() => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+
     }, []);
     return (
         <>
-        <div class="nav">
+        <div className="nav">
             <div className="nav-col">
-                <a href="#"><img src="./assets/img/logo.png" alt="go home"/></a>
+                <a href="#"><img src={Logo} alt="go home"/></a>
             </div>
             <div className="nav-col">
         <a target="_blank" rel="noreferrer" href="https://www.instagram.com/"><svg className="insta icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
@@ -56,7 +135,7 @@ const Sidebar = () => {
             <path d="M20.2 6.9C16.6 10.6 14 13.1 13.4 13.8C13.2 14 12.9 14.5 12.2 14.7C11.9 14.8 11.7 14.7 11.4 14.8C10.9 15.1 10.7 16.3 11.2 16.9C11.6 17.4 12.8 17.2 14 16.3C16.4 13.9 18.8 11.4 21.2 8.9C21.2 8.3 21.2 7.7 21.2 7.2C20.8 7 20.5 7 20.2 6.9Z" />
             </svg></a>
             
-            <svg class="burger icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg className="burger icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <mask id="mask0_207_13" style={{maskType: "luminance"}} maskUnits="userSpaceOnUse" x="0" y="1" width="23" height="9">
                 <path d="M22.8 1.10001H0.900024V9.20001H22.8V1.10001Z" fill="white"/>
               </mask>
@@ -123,52 +202,12 @@ const Sidebar = () => {
                                 <div className="face face6">
                                     <img src={starIcon} alt="Click icon to go home"/>  
                                 </div>
-                                {/* <div className="face face1">
-                                    <img src={chair02Icon} alt="chair icon"/> 
-                                </div>
-                                <div className="face face2">
-                                    <img src={chairIcon} alt="chair icon"/> 
-                                </div>
-                                <div className="face face3">
-                                    <img src={cubeIcon} alt="cube icon"/> 
-                                </div>
-                                <div className="face face4">
-                                    <img src={eyesIcon} alt="eyes icon"/> 
-                                </div>
-                                <div className="face face5">
-                                    <img src={thumbsUpIcon} alt="thumbs up icon"/> 
-                                </div>
-                                <div className="face face6">
-                                    <img src={starIcon} alt="star icon"/> 
-                                </div> */}
+                                
                             </div>
                         </div>
                     </Link>
             </div>
-                {/* <ul className="link-tree">
-                    <li>
-                        <Link exact="true" activeclassname="active" className='nav-link about' to="/WhatsBest" onClick={handleClick}>
-                            <img className="nav-icon" src={chairIcon} alt="find out what's best"/>
-                            <p>What's <br></br>Best</p>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link exact="true" activeclassname="active" className='nav-link cases' to="/BestCase" onClick={handleClick}>
-                            <img className="nav-icon" src={thumbsUpIcon} alt="view case studies"/>
-                            <p>Best Case Scenarios</p>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link exact="true" activeclassname="active" className='nav-link friends' to="/BestFriends" onClick={handleClick}>
-                            <img className="nav-icon" src={eyesIcon} alt="read testimonials"/>
-                            <p>Best Friends</p>
-                        </Link>
-                    </li>
-                </ul> */}
             </div>
-           
-        
-        
         </>
     )
 }
