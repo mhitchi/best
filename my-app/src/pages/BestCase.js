@@ -4,6 +4,7 @@ import HomeContent from '../components/Content/Home';
 import WhatsBestContent from '../components/Content/WhatsBest';
 import BestCaseContent from '../components/Content/BestCase';
 import BestFriendsContent from '../components/Content/BestFriends';
+import ContactContent from '../components/Content/Contact';
 
 const BestCase = () => {
     return (
@@ -15,6 +16,7 @@ const BestCase = () => {
             <li className="kids what"><WhatsBestContent/></li>
         </ul>
             <img className="loader" src={starIcon04} alt="loader star"/>
+            <div className="contact"><ContactContent/></div>
         </>
     )
 }
