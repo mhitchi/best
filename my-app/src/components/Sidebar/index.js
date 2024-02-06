@@ -80,7 +80,7 @@ const [ scrollPercentage, setScrollPercentage ] = useState(0);
         const currentPosition = window.scrollY;
 
         const scrollPercentage = (currentPosition / (fullHeight - windowHeight)) * 100;
-        console.log(scrollPercentage)
+        // console.log(scrollPercentage)
         setScrollPercentage(scrollPercentage)
     }
     // window.addEventListener('scroll', () => {

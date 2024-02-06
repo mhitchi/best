@@ -6,6 +6,12 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/ScrollTrigger';
 import ContactContent from '../Content/Contact';
 
+import chair02 from "../../assets/img/AnotherChairSketch02.png";
+import beamChair from "../../assets/img/BeamChair.png";
+import beamChairSketch from "../../assets/img/BeamChairSketch.png";
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -16,29 +22,48 @@ const Layout = () => {
         window.scrollTo(position)
     }
 
-    // let nav = document.querySelector('nav-daddy');
-    // nav.addEventListener('click', () => {
-    //     window.scrollTo(0, 0);
-    // })
+    //start random img 
 
-    // start scrolltrigger mask svg
+    //place images randomly on page within legible areas
+    //get array of image elements
+    const productImgArr = [...document.querySelectorAll(".product")]
+    console.log(productImgArr)
 
-    // const container = document.querySelector('.containerScroll');
-    // const sections = gsap.utils.toArray('.containerScroll .parent li');
-    // const texts = gsap.utils.toArray('.anim');
-    // const mask = document.querySelector('.mask');
+    //get array of src files
+    const imgFilesArr = ["../../assets/img/AnotherChairSketch02.png", "../../assets/img/BeamChair.png", "../../assets/img/BeamChairSketch.png"]
+    console.log(imgFilesArr)
 
-    //tween to move mask
-    // gsap.to(mask, {
-    //     width: "100%",
-    //     scrollTrigger: {
-    //       trigger: ".page",
-    //       start: "top left",
-    //       scrub: 1,
-    //       pinReparent: true
-    //     }
-    //   });
-      
+    function shuffle(array) {
+      let currentIndex = array.length,  randomIndex;
+
+      // While there remain elements to shuffle.
+      while (currentIndex > 0) {
+
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex], array[currentIndex]];
+      }
+      // console.log("shuffling: " + array)
+
+       //for each image, apply random src
+    //for each image, apply random coordinates
+
+      for ( let i = 0; i < productImgArr.length; i++ ) {
+        productImgArr[i].src= array[i]
+        console.log("product source: " + array[i])
+    }
+      return array;
+    }
+
+    shuffle(imgFilesArr);
+
+   
+    //end random img
+
       //start test
 
       const firstRef = useRef();
@@ -47,19 +72,6 @@ const Layout = () => {
       
     useEffect(() => {
 
-    //     let roughKids= document.getElementsByClassName('kids');
-    // let kids = Array.from(roughKids);
-    // let colors = ["#009c73", "#ffd800", "#e65925", "#2b93d1"]
-    // //kids logging undefined
-    // console.log(roughKids)
-    // console.log(kids)
-    // console.log(colors)
-    
-
-    // for (let i = 0; i < kids.length; i++) {
-       
-    //     kids[i].style={backgroundColor: `${colors[i]}`}
-    // }
     
         const ctx = gsap.context((self) => {  
         const sections = self.selector("li");
