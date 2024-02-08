@@ -16,11 +16,48 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Layout = () => {
+  
     const [position, setPosition] = useState('0,0')
+    //start hybrid scroll
+    const st = ScrollTrigger.create({
+      trigger: ".wrapper",
+      start: "top top",
+      end: "+=400%",
+      pin: true,
+      markers: {
+        indent: 200
+      },
+      id: "pin"
+    });
+    const t = gsap.to(".content", {
+      x: () => -(window.innerWidth * 3),
+      duration: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: st.start,
+        end: "+=300%",
+        scrub: true,
+        markers: true,
+        id: "t"
+      }
+    });
+    
+    const circleTween = gsap.to(".final", {
+      clipPath: "circle(71% at 50% 50%)",
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: t.scrollTrigger.end,
+        end: st.end,
+        scrub: true,
+        markers: { indent: 400 },
+        id: "final"
+      }
+    });
+    
 
-    const handleClick = () => {
-        window.scrollTo(position)
-    }
+    //end hybrid scroll
 
     //start random img 
 
@@ -31,7 +68,7 @@ const Layout = () => {
 
     //get array of src files
     const imgFilesArr = ["../../assets/img/AnotherChairSketch02.png", "../../assets/img/BeamChair.png", "../../assets/img/BeamChairSketch.png"]
-    console.log(imgFilesArr)
+    //console.log(imgFilesArr)
 
     function shuffle(array) {
       let currentIndex = array.length,  randomIndex;
@@ -54,7 +91,7 @@ const Layout = () => {
 
       for ( let i = 0; i < productImgArr.length; i++ ) {
         productImgArr[i].src= array[i]
-        console.log("product source: " + array[i])
+        console.log("product source: " + productImgArr[i].src)
     }
       return array;
     }
@@ -64,108 +101,22 @@ const Layout = () => {
    
     //end random img
 
-      //start test
-
-      const firstRef = useRef();
-      const secondRef = useRef();
-      const wrapperRef = useRef();
-      
-    useEffect(() => {
-
-    
-        const ctx = gsap.context((self) => {  
-        const sections = self.selector("li");
-       
-    
-        const horizontalTween = gsap.to(sections, {
-          xPercent: -100 * (sections.length - 1),
-          ease: "none",
-          scrollTrigger: {
-            trigger: wrapperRef.current,
-            pin: true,
-            // markers: true,
-            scrub: 1,
-            end: () => "+=" + document.querySelector(".page").offsetWidth
-          }
-        })
-    
-          gsap.to(firstRef.current, {
-          rotate: 90,
-          scale:3,
-            scrollTrigger: {
-              trigger:firstRef.current,
-              containerAnimation: horizontalTween,
-            //   markers:true,
-              start: "center center"
-            }
-        })
-          
-           gsap.to(secondRef.current, {
-          rotate: -90,
-             scale:3,
-            scrollTrigger: {
-              trigger:secondRef.current,
-               containerAnimation: horizontalTween,
-            //   markers:true,
-              start: "center center"
-            }
-        })
-
-          
-          }, wrapperRef);
-          return () => ctx.revert();
-          
-      }, []);
-
-
-      //end test
-
-    // end scrolltrigger mask svg
-
-
-    // const maskStyle= {
-    //     maskType:"alpha", 
-    //     x:"0", 
-    //     y:"0", 
-    //     width:"900", 
-    //     height:"10"
-    // }
-    const handleScroll = (event) => {
-        const container = event.target;
-        const scrollAmount = event.deltaY;
-        container.scrollTo( {
-          top: 0,
-          left: container.scrollLeft + scrollAmount,
-          behavior: 'smooth',
-        //   markers: true,
-        });
-        
-      }
+  
     
     return (
         <>
-        <div onClick={handleClick}><Sidebar/></div>
+        <div ><Sidebar/></div>
         
-        <div className="page layout containerScroll" onWheel={handleScroll} ref={wrapperRef}>
-            <span className="tags top-tags"></span>
-
-
-{/* start */}
-{/* <div className="wrapper" ref={wrapperRef}>
-      <section className="header"> <h1>HEADER</h1></section>
-        <section className="first"><h2 ref={firstRef}>FIRST</h2></section>
-        <section className="second"><h2 ref={secondRef}>SECOND</h2></section>
-      </div> */}
-
-{/* end */}
-            <div className="scroll_container">
-                <div className="sticky_wrap">
-                  <Outlet />
-                </div>
-            </div>
-            
+        <div className="page layout" >
+          <div className="wrapper">
+              <div className="content">
+                <Outlet />
+              </div>
           </div>
+          <div className="final"></div>
           <div className="contact"><ContactContent/></div>
+        </div>
+
         
         </>
     )

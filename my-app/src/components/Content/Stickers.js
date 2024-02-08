@@ -1,12 +1,12 @@
 import '../../App.scss';
 
 
-const HomeContent = () => {
+const StickersContent = () => {
     return (
         <>
-        <div className= "container home-page">
+        <div className= "container stickers-page">
             <div className="text-zone anim">
-                <h1>BEST home</h1>
+                <h1>stickers</h1>
                 <div className="imgArea below">
                   <img className="product" src="" alt="product photography"/>
                   <img className="product" src="" alt="product photography"/>
@@ -24,4 +24,4 @@ const HomeContent = () => {
     )
 }
 
-export default HomeContent;
+export default StickersContent;
