@@ -123,7 +123,7 @@ const [ scrollPercentage, setScrollPercentage ] = useState(0);
         <>
         <div className="nav">
             <div className="nav-col">
-                <a href="#"><img src={Logo} alt="go home"/></a>
+                <a className="logo" href="#"><img src={Logo} alt="go home"/></a>
             </div>
             <div className="nav-col">
         <a target="_blank" rel="noreferrer" href="https://www.instagram.com/"><svg className="insta icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >

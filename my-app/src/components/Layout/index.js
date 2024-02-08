@@ -105,8 +105,7 @@ const Layout = () => {
     
     return (
         <>
-        <div ><Sidebar/></div>
-        
+        <Sidebar/>
         <div className="page layout" >
           <div className="wrapper">
               <div className="content">

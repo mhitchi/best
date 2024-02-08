@@ -1,4 +1,5 @@
 import '../App.scss';
+import Sidebar from '../components/Sidebar';
 import starIcon from "../assets/icons/star_icon.png";
 import StickersContent from '../components/Content/Stickers';
 import WhatsBestContent from '../components/Content/WhatsBest';

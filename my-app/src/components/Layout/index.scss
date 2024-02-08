@@ -1,100 +1,5 @@
 @import '../../App.scss';
 
-.page {
-    width: 100vw;
-    height: 100svh;
-    position: absolute;
-}
-
-
-.tags {
-    color: $yellow;
-    opacity: 0.6;
-    position: absolute;
-    bottom: 0;
-    left: 120px;
-    font-size: 18px;
-}
-
-.container {
-    width: 100vw;
-    will-change: contents;
-    height: 100svh;
-    min-height: 566px;
-    // position: absolute;
-    opacity: 0.5;
-    // margin-left: 5%;
-    margin: .25% 0 0 5%;
-    z-index: 1;
-    transform-style: preserve-3d;
-    animation: fadeIn 1s forwards;
-}
-
-.containerScroll {
-    overflow-y: hidden;
-}
-
-.svg {
-    position: fixed;
-    top: 3em;
-    left: 10.85vw;
-    width: 90vw;
-
-    .mask {
-        width: 0;
-    }
-}
-
-
-.parent {
-    display: flex;
-    flex-direction: column;
-}
-
-
-//start test
-* {
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
-  }
-  
-  .parent li {
-    width:100%;
-    height:100svh;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .page {
-    width: 300%;
-    height: 100svh;
-    display: flex;
-   }
-//end test
-
-//colorful backgrounds
-.parent li.home {
-    // background-color: #009c73
-    background: linear-gradient(90deg, rgba(0,156,115,1) 75%, rgba(255,216,0,1) 100%);
-}
-
-.parent li.what {
-    //background-color: #ffd800;
-    background: linear-gradient(90deg, rgba(255,216,0,1) 75%, rgba(230,89,37,1) 100%);
-}
-
-.parent li.case {
-    //background-color: #e65925;
-    background: linear-gradient(90deg, rgba(230,89,37,1) 75%, rgba(43,147,209,1) 100%);
-}
-
-.parent li.friends {
-    //background-color: #2b93d1;
-    background: linear-gradient(90deg, rgba(43,147,209,1) 75%, rgba(0,156,115,1) 100%);
-}
-
 
 // start redo of layout from besttest
 // primary colors and typography
@@ -117,9 +22,9 @@ $white: #fff6f1;
     height: 100svh;
     background-color: black;
     overflow: hidden;
-  }
-  
-  .content {
+}
+
+.content {
     width: 400vw;
     height: 100svh;
     background-color: teal;
@@ -127,18 +32,18 @@ $white: #fff6f1;
     justify-content: space-between;
     align-items: center;
     position: relative;
-  }
-  .final {
+}
+.final {
     width: 100vw;
     height: 100svh;
     background-color: white;
     clip-path: circle(3% at 50% 50%);
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Roboto Mono';
     src: url('../../assets/fonts/RobotoMono-Bold.ttf') format('opentype');
-  }
+}
 @font-face {
   font-family: 'Inter';
   src: url('../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('opentype');
@@ -149,13 +54,13 @@ $white: #fff6f1;
   src: url('../../assets/fonts/AlteHaasGroteskRegular.ttf') format('opentype');
 }
 
-$header-font: 'Roboto Mono', sans-serif;
+$header-font: 'Inter', sans-serif;
 $body-font: 'Alte', sans-serif;
 
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Roboto Mono';
+  font-family: 'Inter';
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -345,4 +250,15 @@ section:last-child .container{
     position: absolute;
     top: 100svh;
     right: 0;
+  }
+
+  .page-wrapper, .container {
+    height: 100svh;
+    width: 99vw;
+  }
+  .page {
+    margin-top:-147px;
+  }
+  .container {
+    padding-top: 20svh
   }

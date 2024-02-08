@@ -3,9 +3,9 @@ import '../../App.scss';
 const BestFriendsContent = () => {
     return (
         <>
-        <div className= "container testimonials-page">
+        <div className= "container testimonials-page blue">
             <div className="text-zone anim">
-                <h1>BEST FRIENDS</h1>
+                <h1 className="thick-outline">BEST FRIENDS</h1>
                 <h3 className="left thick-outline">Our clients range from other designers and Architecture firms
                   to individuals looking for unique furniture pieces.</h3>
                 <div className="imgArea below">

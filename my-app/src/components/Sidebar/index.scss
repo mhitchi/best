@@ -103,7 +103,9 @@
   }
 }
 
-
+.logo img{
+  backdrop-filter: blur(10px);
+}
 
 //start spincube logo
 .stage-cube-cont {

@@ -4,7 +4,7 @@ import '../../App.scss';
 const StickersContent = () => {
     return (
         <>
-        <div className= "container stickers-page">
+        <div className= "container stickers-page green">
             <div className="text-zone anim">
                 <h1>stickers</h1>
                 <div className="imgArea below">
