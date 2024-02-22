@@ -23,7 +23,11 @@ const Sidebar = () => {
     //start besttest
 const [ scrollPercentage, setScrollPercentage ] = useState(0);
 
-
+//spin faster if scrolling
+window.addEventListener('wheel', (e) => {
+    document.querySelector(".cube-spinner").style.animationName = "spincube"
+    
+  })
 
 // //orange pink yellow black
 // window.addEventListener('scroll', (e) => {
@@ -107,10 +111,12 @@ const [ scrollPercentage, setScrollPercentage ] = useState(0);
     const imgRef = useRef(null);
     useEffect( () => {
         //spin the cube
-        const el = imgRef.current;
-        gsap.fromTo(el, { rotation: 0 }, { rotation: 0, duration: 10, scrollTrigger: {
-            trigger: el
-        } })
+
+        // const el = imgRef.current;
+        // gsap.fromTo(el, { rotation: 0 }, { rotation: 20, duration: 10, scrollTrigger: {
+        //     trigger: el,
+        //     horizontal: true
+        // } })
         //scroll the scroll
         window.addEventListener('scroll', handleScroll);
 
