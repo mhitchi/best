@@ -29,6 +29,7 @@ window.addEventListener('wheel', (e) => {
     
   })
 
+
 // //orange pink yellow black
 // window.addEventListener('scroll', (e) => {
 //   // document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
@@ -86,6 +87,30 @@ window.addEventListener('wheel', (e) => {
         const scrollPercentage = (currentPosition / (fullHeight - windowHeight)) * 100;
         // console.log(scrollPercentage)
         setScrollPercentage(scrollPercentage)
+
+         // //change svg color
+        document.querySelectorAll(".icon").forEach (svg => {
+
+            const navColor = document.querySelector(".nav")
+            if (scrollPercentage < 10 ) {
+            svg.style.fill = "#000";
+            navColor.style.backgroundColor = "rgb(43,147,209,0)"
+            } else if (scrollPercentage >= 10 && scrollPercentage < 100) {
+            svg.style.fill = "#e65925";
+            navColor.style.backgroundColor = "rgb(43,147,209,0)"
+            } else if (scrollPercentage >= 100 && scrollPercentage < 200) {
+            svg.style.fill = "#edaac6";
+            navColor.style.backgroundColor = "rgb(43,147,209,0)"
+            } else if (scrollPercentage >= 200 && scrollPercentage <= 300) {
+            svg.style.fill = "#ffd800";
+            
+            } 
+            if (scrollPercentage >=400) {
+            navColor.style.backgroundColor = "rgb(43,147,209,1)"
+            } 
+            svg.style.transform ="ease"
+        })
+
     }
     // window.addEventListener('scroll', () => {
     //      document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
